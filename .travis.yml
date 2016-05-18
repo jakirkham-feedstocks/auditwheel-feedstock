@@ -1,4 +1,3 @@
-
 # This file was generated automatically from conda-smithy. To update this configuration,
 # update the conda-forge.yaml and/or the recipe/meta.yaml.
 
@@ -10,19 +9,24 @@ env:
     - secure: "hn5Oev/0425ZJfgqQyL0sd4I+uFfMBGsLiI5ayonLB72v4NSOvL3wQRWt33W9wG7i+4CC0FZxxpmbvrPrkvtQ1VTZdggvg+5kuqddO6PpFEll6sxOB/wV7P5o9VX3B/Unkmb4qU+gwBDTUiYkYbKuwAAErfLUh/Yp9Hr/F1TfS/lmXIAFnCokneuUfrbtD429uXgqYTzfJUC/gDs60UY4dzgitj2HW8w3ag3wTpcyNHOdT44fFkmKTFs8OG9RtwiEuWrG/KXe966v18wHzBV6qj1qIZ8rQB0L7PruhBqsqcLqfzh5Gx3Xv5m2wWkG1d1el3Hq0XovvjrXodiglJkboXUofs4+Yx90XQhNve4RV5aPqUbt3PICJtIBnhcjhSPkvqo8xXTUkEqFCUCMwNGTodvU4dr6RLfrB/zPE5mMO6GjSUy2gAX4JN0+isYRwjJ1QFSxXZgo7kG5Z97ldo4jIlGKR8Y1RZKkZ+8m3xab3FDXWifVxaIV1mzkCkCCw2jg9DbFCRepWehftTKJbbWRD7Mt+w5KcWsSS6DO/FrSLaYuNRqD7gechokFORWzytmHyJ8JXQ41wNHHh2rvxweSFiuAEUMBw/2DUROdq7DL4LM9pNB/zUU0GCNCCNvOSpYLjiGR6/G9E6GC0SApuw771P/tTKf7JIS9MmbwvK+ebM="
 
 
+before_install:
+    # Remove homebrew.
+    - brew remove --force $(brew list)
+    - brew cleanup -s
+    - rm -rf $(brew --cache)
+
 install:
     - |
       MINICONDA_URL="http://repo.continuum.io/miniconda"
       MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
-      wget "${MINICONDA_URL}/${MINICONDA_FILE}"
+      curl -O "${MINICONDA_URL}/${MINICONDA_FILE}"
       bash $MINICONDA_FILE -b
 
       export PATH=/Users/travis/miniconda3/bin:$PATH
 
+      conda config --set show_channel_urls true
       conda update --yes conda
-      conda install --yes conda-build jinja2 anaconda-client
-
-      
+      conda install --yes conda-build=1.20.0 jinja2 anaconda-client
       conda config --add channels conda-forge
       
 

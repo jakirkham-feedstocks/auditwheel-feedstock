@@ -5,7 +5,7 @@ Home: https://github.com/pypa/auditwheel
 
 Package license: MIT License
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Linux wheel verification tool to ensure compatibility
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/auditwheel-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/auditwheel-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/auditwheel-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/auditwheel-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/auditwheel-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/auditwheel-feedstock/branch/master)
