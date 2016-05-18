@@ -8,8 +8,8 @@ source:
   md5: f42ec0ed1ce5e09e5ef5d3ce4f9826e6
 
 build:
-  skip: True  # [not linux]
-  skip: True  # [py2k]
+  number: 0
+  skip: True  # [py2k or not linux]
 
 requirements:
   build:
@@ -17,12 +17,12 @@ requirements:
     - python
     - setuptools
     - pyelftools
-    - typing     [py<35]
+    - typing      # [py<35]
 
   run:
     - python
     - pyelftools
-    - typing     [py<35]
+    - typing      # [py<35]
 
 test:
   commands:
