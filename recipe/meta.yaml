@@ -6,7 +6,7 @@ package:
 
 source:
   fn: auditwheel-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/source/a/auditwheel/auditwheel-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/a/auditwheel/auditwheel-{{ version }}.tar.gz
   md5: f42ec0ed1ce5e09e5ef5d3ce4f9826e6
 
 build:
