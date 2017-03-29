@@ -10,7 +10,7 @@ source:
   sha256: 8cf3e4302361447e76a6b4ff452bce01f9905e349365850774c3e16a8448b0ce
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k or not linux]
   entry_points:
     - auditwheel = auditwheel.main:main
