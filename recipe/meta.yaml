@@ -32,7 +32,7 @@ test:
 
 about:
   home: https://github.com/pypa/auditwheel
-  license: MIT License
+  license: MIT
   summary: Linux wheel verification tool to ensure compatibility
 
 extra:
