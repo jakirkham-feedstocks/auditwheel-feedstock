@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   skip: True  # [py2k or not linux]
+  entry_points:
+    - auditwheel = auditwheel.main:main
 
 requirements:
   build:
