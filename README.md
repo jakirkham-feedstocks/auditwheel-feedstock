@@ -3,7 +3,7 @@ About auditwheel
 
 Home: https://github.com/pypa/auditwheel
 
-Package license: MIT License
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
