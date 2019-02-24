@@ -10,7 +10,7 @@ source:
   md5: 2b989cb308ced9b237bae343653cc8ba
 
 build:
-  number: 1000
+  number: 1001
   skip: True  # [py2k or not linux]
 
 requirements:
@@ -34,7 +34,8 @@ test:
 
 about:
   home: https://github.com/pypa/auditwheel
-  license: MIT License
+  license: MIT
+  license_file: LICENSE
   summary: Linux wheel verification tool to ensure compatibility
 
 extra:
