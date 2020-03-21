@@ -10,7 +10,7 @@ source:
   md5: f6f18ac54e1689e4e02769dd75a6d19c
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k or not linux]
 
 requirements:
